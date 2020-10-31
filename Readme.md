@@ -14,7 +14,7 @@ You can get a finnhub api key [here](https://finnhub.io/).
 
 It is used to retrieve the latest stock market data.
 
-Then, install [pipenv](https://pypi.org/project/pipenv/), and run `pipenv install`.
+Then, install [pipenv](https://pypi.org/project/pipenv/), run `pipenv install`, and eventually `python main.py`
 
 Or, just simply `pipenv run python3.8 main.py`.
 
