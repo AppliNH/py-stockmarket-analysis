@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 finnhub-python = "*"
 pandas = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.8"

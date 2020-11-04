@@ -62,6 +62,10 @@ def main():
     auto_df.to_csv("automobile_stock_df.csv")
     print("automobile_stock_df.csv done")
 
+    print(social_df)
+    print("____________")
+    print(auto_df)
+
 
 if __name__ == "__main__":
     main()
