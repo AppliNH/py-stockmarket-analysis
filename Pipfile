@@ -9,6 +9,7 @@ verify_ssl = true
 finnhub-python = "*"
 pandas = "*"
 python-dotenv = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.8"

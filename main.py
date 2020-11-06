@@ -6,7 +6,7 @@ import time
 import os
 from dotenv import load_dotenv
 
-import analyze
+import preproc
 
 now = datetime.now()
 year_ago = now - timedelta(days=1*365)
@@ -58,7 +58,7 @@ def main():
 
     # Automotive companies stocks dataset
     auto_df = generate_final_df_from_symbols(symbols=["GM","BMWYY","VLKAF", "PUGOY"])
-    auto_df = analyze.automobile_stocks_pre_processing(auto_df)
+    auto_df = preproc.automobile_stocks_pre_processing(auto_df)
     auto_df.to_csv("automobile_stock_df.csv")
     print("automobile_stock_df.csv done")
 
