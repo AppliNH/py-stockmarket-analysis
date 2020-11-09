@@ -10,6 +10,7 @@ finnhub-python = "*"
 pandas = "*"
 python-dotenv = "*"
 seaborn = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.8"
