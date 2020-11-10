@@ -53,10 +53,12 @@ print("_______________Stock performance :  Daily returns________________________
 
 ret_autos = automobile_closes_df.pct_change().dropna().copy()
 ret_autos.plot(kind="hist", figsize=(12,8), bins=100, subplots=True, sharey=True, title="Stock performance : distribution of daily returns for companies of automotive industry")
+plt.xlabel("Performance (%)")
 plt.show()
 
 ret_social = social_closes_df.pct_change().dropna().copy()
 ret_social.plot(kind="hist", figsize=(12,8), bins=100, subplots=True, sharey=True, title="Stock performance : distribution of daily returns for companies of social medias industry")
+plt.xlabel("Performance (%)")
 plt.show()
 
 ret_autos_mean = ret_autos.mean()
@@ -75,18 +77,22 @@ print(ret_social_std)
 
 ret_autos_mean.plot(kind="bar")
 plt.title("Daily returns means for companies of automotive industry")
+plt.ylabel("Performance (%)")
 plt.show()
 
 ret_autos_std.plot(kind="bar")
 plt.title("Daily returns standard deviation for companies of automotive industry")
+plt.ylabel("Performance (%)")
 plt.show()
 
 ret_social_mean.plot(kind="bar")
 plt.title("Daily returns means for companies of social medias industry")
+plt.ylabel("Performance (%)")
 plt.show()
 
 ret_social_std.plot(kind="bar")
 plt.title("Daily returns standard deviation for companies of social medias industry")
+plt.ylabel("Performance (%)")
 plt.show()
 
 
