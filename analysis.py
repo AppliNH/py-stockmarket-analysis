@@ -33,14 +33,14 @@ plt.show()
 
 # Seconding display : Performance evolution of closing prices
 
-automotive_closes_normalize_from_first = automobile_closes_df.div(automobile_closes_df.iloc[0]).copy()
+automotive_closes_normalize_from_first = automobile_closes_df.div(automobile_closes_df.iloc[0]).mul(100).copy()
 
 automotive_closes_normalize_from_first.plot()
 plt.title("Performance evolution of stocks for automotive industry")
 plt.ylabel("Performance (%)")
 plt.show()
 
-social_closes_normalize_from_first = social_closes_df.div(social_closes_df.iloc[0]).copy()
+social_closes_normalize_from_first = social_closes_df.div(social_closes_df.iloc[0]).mul(100).copy()
 
 social_closes_normalize_from_first.plot()
 plt.title("Performance evolution of stocks for social medias industry")
@@ -53,12 +53,12 @@ print("_______________Stock performance :  Daily returns________________________
 
 ret_autos = automobile_closes_df.pct_change().dropna().copy()
 ret_autos.plot(kind="hist", figsize=(12,8), bins=100, subplots=True, sharey=True, title="Stock performance : distribution of daily returns for companies of automotive industry")
-plt.xlabel("Performance (%)")
+plt.xlabel("Daily returns percentage")
 plt.show()
 
 ret_social = social_closes_df.pct_change().dropna().copy()
 ret_social.plot(kind="hist", figsize=(12,8), bins=100, subplots=True, sharey=True, title="Stock performance : distribution of daily returns for companies of social medias industry")
-plt.xlabel("Performance (%)")
+plt.xlabel("Daily returns percentage")
 plt.show()
 
 ret_autos_mean = ret_autos.mean()
@@ -77,22 +77,22 @@ print(ret_social_std)
 
 ret_autos_mean.plot(kind="bar")
 plt.title("Daily returns means for companies of automotive industry")
-plt.ylabel("Performance (%)")
+plt.ylabel("Daily returns percentage")
 plt.show()
 
 ret_autos_std.plot(kind="bar")
 plt.title("Daily returns standard deviation for companies of automotive industry")
-plt.ylabel("Performance (%)")
+plt.ylabel("STD Value")
 plt.show()
 
 ret_social_mean.plot(kind="bar")
 plt.title("Daily returns means for companies of social medias industry")
-plt.ylabel("Performance (%)")
+plt.ylabel("Daily returns percentage")
 plt.show()
 
 ret_social_std.plot(kind="bar")
 plt.title("Daily returns standard deviation for companies of social medias industry")
-plt.ylabel("Performance (%)")
+plt.ylabel("STD Value")
 plt.show()
 
 
