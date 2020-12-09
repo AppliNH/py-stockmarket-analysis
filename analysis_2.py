@@ -63,8 +63,8 @@ def dateparse (time_in_secs):
 
 plt.style.use("seaborn")
 
-automobile_df = pd.read_csv("automobile_stock_df.csv", header=[0,1], index_col=0, parse_dates=True,date_parser=dateparse)
-social_df = pd.read_csv("social_medias_stock_df.csv", header=[0,1], index_col=0, parse_dates=True,date_parser=dateparse)
+automobile_df = pd.read_csv("old_csv/automobile_stock_df.csv", header=[0,1], index_col=0, parse_dates=True,date_parser=dateparse)
+social_df = pd.read_csv("old_csv/social_medias_stock_df.csv", header=[0,1], index_col=0, parse_dates=True,date_parser=dateparse)
 
 # _____________________ Spot bullish engulfing pattern _____________________________
 

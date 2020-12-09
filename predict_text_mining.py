@@ -58,10 +58,9 @@ def text_minining_sentiment(ticker: str, df: pd.DataFrame):
                 date = datetime.datetime.strptime(('-'.join(date_str[1:4])), '%d-%b-%Y')
             except:
                 return
-            
-            x = StockNews(ticker, headline, date)
-
-            stock_news_list.append(x)
+            if date <= datetime.datetime.strptime('03-12-2020', '%d-%m-%Y'):
+                x = StockNews(ticker, headline, date)
+                stock_news_list.append(x)
             
 
         vader = SentimentIntensityAnalyzer()
@@ -160,10 +159,10 @@ if __name__ == "__main__":
     #             prev = column
 
 
-    text_minining_sentiment("BMWYY", automobile_df["BMWYY"])
+    # text_minining_sentiment("BMWYY", automobile_df["BMWYY"])
     # text_minining_sentiment("PUGOY", automobile_df["PUGOY"])
     
     # text_minining_sentiment("FB", social_df["FB"])
-    # text_minining_sentiment("SNAP", social_df["SNAP"])
+    text_minining_sentiment("SNAP", social_df["SNAP"])
     # text_minining_sentiment("PINS", social_df["PINS"])
     
