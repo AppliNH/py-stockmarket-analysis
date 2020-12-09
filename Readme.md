@@ -3,6 +3,7 @@
 
 Stock market analysis with Python3.8 and pandas.
 
+You can also read the report, which is the file `Business Analytics - Group Project Report.pdf`. 
 
 ## How to run
 
@@ -17,4 +18,3 @@ It is used to retrieve the latest stock market data.
 Then, install [pipenv](https://pypi.org/project/pipenv/), run `pipenv install`, and eventually `python main.py`
 
 Or, just simply `pipenv run python3.8 main.py`.
-
